@@ -92,8 +92,8 @@ const HeroSection = ({ data }: { data: IInvite }) => {
         className="absolute bottom-10 left-1/2 -translate-x-1/2 text-center w-full px-4"
       >
         <p className="text-foreground/60 font-body mb-2 text-sm md:text-lg">
-          With the blessings of Lord Ganesh, we invite you to celebrate our
-          union.
+          With the blessings of Lord Venkateshwara, we invite you to celebrate
+          our union.
         </p>
         <div className="animate-bounce text-primary text-xs tracking-widest uppercase opacity-60">
           Scroll to Explore

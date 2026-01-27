@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import { HeroSection, Loader } from "@/components";
+import { EventsSection, HeroSection, Loader } from "@/components";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -40,27 +40,30 @@ export default function Home() {
     <div className="flex min-h-screen items-center justify-center relative bg-background text-foreground font-poppins">
       <AnimatePresence>{loading ? <Loader /> : null}</AnimatePresence>
 
-      <div className="content-container py-20">
-        {error ? (
-          <div className="flex flex-col items-center justify-center min-h-[60vh] text-center">
-            <h2 className="text-3xl text-primary mb-4 font-heading">
-              Om Ganeshay Namah
-            </h2>
-            <p className="text-muted-foreground">{error}</p>
-          </div>
-        ) : data ? (
-          <>
-            <HeroSection data={data} />
-            <div className="h-24 w-full pointer-events-none" />
-          </>
-        ) : (
-          <div className="flex flex-col items-center justify-center min-h-[60vh] text-center">
-            <h2 className="text-3xl text-primary mb-4 font-heading">
-              Om Ganeshay Namah
-            </h2>
-          </div>
-        )}
-      </div>
+      {error ? (
+        <div className="flex flex-col items-center justify-center min-h-[60vh] text-center">
+          <h2 className="text-3xl text-primary mb-4 font-heading">
+            Om Ganeshay Namah
+          </h2>
+          <p className="text-muted-foreground">{error}</p>
+        </div>
+      ) : data ? (
+        <main className="min-h-[60vh] w-full">
+          {/* HERO handles its own centering */}
+          <HeroSection data={data} />
+
+          {/* CONTENT BELOW HERO */}
+          <section className="content-container py-20">
+            <EventsSection events={data.events} />
+          </section>
+        </main>
+      ) : (
+        <div className="flex flex-col items-center justify-center min-h-[60vh] text-center">
+          <h2 className="text-3xl text-primary mb-4 font-heading">
+            Om Ganeshay Namah
+          </h2>
+        </div>
+      )}
     </div>
   );
 }

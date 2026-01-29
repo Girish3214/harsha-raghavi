@@ -1,3 +1,5 @@
+"use client";
+
 import { useScrollThreshold } from "@/hooks/useScrollThreshold";
 import { motion, AnimatePresence } from "framer-motion";
 

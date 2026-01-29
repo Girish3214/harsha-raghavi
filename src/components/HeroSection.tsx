@@ -1,3 +1,5 @@
+"use client";
+
 import { useScrollThreshold } from "@/hooks/useScrollThreshold";
 import { IInvite } from "@/lib/models/Invite";
 import { motion } from "framer-motion";
@@ -43,11 +45,7 @@ const HeroSection = ({ data }: { data: IInvite }) => {
             {/* Center Content */}
             <div className="flex flex-col items-center">
               {/* Names */}
-              <h1
-                className="flex flex-col items-center gap-1 sm:gap-2 py-6
-                  text-4xl sm:text-5xl md:text-6xl lg:text-8xl
-                  font-heading gold-shimmer"
-              >
+              <h1 className="flex flex-col items-center gap-1 sm:gap-2 py-6 text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-heading gold-shimmer">
                 <span>{data.brideName}</span>
 
                 <div className="flex justify-center items-center">

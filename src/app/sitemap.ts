@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://arunwtf.com"; // Replace with actual domain
+  const baseUrl = "https://manikantaanddivya-66d6a.com";
 
   return [
     {
@@ -10,6 +10,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 1,
     },
-    // We can add dynamic routes here later when we have /[slug]
   ];
 }

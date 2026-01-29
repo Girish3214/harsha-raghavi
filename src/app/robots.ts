@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/private/",
     },
-    sitemap: "https://arunwtf.com/sitemap.xml", // Replace with actual domain later
+    sitemap: "https://manikantaanddivya-66d6a.com/sitemap.xml",
   };
 }

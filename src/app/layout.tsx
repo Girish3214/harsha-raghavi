@@ -22,34 +22,58 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Wedding Invite | Divya & Manikanta",
+  title: "Divyasree & Manikanta Wedding Invite",
   description:
-    "We cordially invite you to celebrate the wedding of Divya & Manikanta. Join us for the auspicious occasion.",
+    "With the blessings of family and friends, we invite you to celebrate the wedding of Divya Sree and Manikanta Raju.",
   openGraph: {
-    title: "Wedding Invite | Divya & Manikanta",
+    title: "Divyasree & Manikanta Raju | Wedding Invitation",
     description: "Join us in celebrating our wedding.",
-    url: "https://arunwtf.com", // Replace with real URL
-    siteName: "Divya & Manikanta Wedding",
+    url: "https://manikantaanddivya-66d6a.com",
+    siteName: "Divyasree & Manikanta Wedding",
     images: [
       {
-        url: "/images/og-image.jpg", // Ensure this exists or use a default
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Divya & Manikanta Wedding Content",
+        alt: "Wedding invitation of Divya Sree and Manikanta Raju",
       },
     ],
-    locale: "en_US",
+    locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wedding Invite | Divya & Manikanta",
-    description: "Join us in celebrating our wedding.",
-    creator: "@arunwtf",
+    title: "Divyasree & Manikanta Raju | Wedding Invitation",
+    description:
+      "Join us in celebrating the wedding of Divya Sree and Manikanta Raju.",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon_io/favicon.ico" },
+      {
+        url: "/favicon_io/favicon-16x16.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+      {
+        url: "/favicon_io/favicon-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        url: "/favicon_io/android-chrome-192x192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        url: "/favicon_io/android-chrome-512x512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
+    ],
+    apple: [{ url: "/favicon_io/apple-touch-icon.png" }],
   },
+  manifest: "/favicon_io/site.webmanifest",
 };
 
 export default function RootLayout({

@@ -51,9 +51,6 @@ const ContactSection = ({ contacts }: { contacts: IContact[] }) => {
               );
             })}
           </div>
-          <p className="text-sm tracking-widest text-foreground/60">
-            సంప్రదించండి
-          </p>
         </div>
       </section>
       <div className="w-full h-auto flex justify-center items-center">

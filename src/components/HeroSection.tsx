@@ -1,22 +1,26 @@
+import { useScrollThreshold } from "@/hooks/useScrollThreshold";
 import { IInvite } from "@/lib/models/Invite";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 const HeroSection = ({ data }: { data: IInvite }) => {
+  const hideHeroContent = useScrollThreshold(500);
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* ================= CENTERED HERO CONTENT ================= */}
       <div className="absolute inset-0 flex items-center justify-center">
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          animate={{
+            opacity: hideHeroContent ? 0 : 1,
+            y: hideHeroContent ? -20 : 0,
+          }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="relative mx-auto max-w-5xl px-6 pb-10 pt-6 rounded-3xl text-center"
         >
           {/* Mandala Watermark */}
-          <div className="pointer-events-none absolute top-6 left-0 right-0 flex items-center justify-center opacity-[0.1]">
+          <div className="pointer-events-none absolute top-0 left-0 right-0 flex items-center justify-center opacity-[0.1]">
             <Image
-              src="/images/mandal.png"
+              src="/images/mandala.png"
               alt="mandal"
               width={420}
               height={420}
@@ -32,7 +36,7 @@ const HeroSection = ({ data }: { data: IInvite }) => {
                 src="/images/bride.png"
                 alt="bride"
                 fill
-                className="object-contain"
+                className="object-contain scale-100"
               />
             </div>
 
@@ -46,14 +50,15 @@ const HeroSection = ({ data }: { data: IInvite }) => {
               >
                 <span>{data.brideName}</span>
 
-                <Image
-                  src="/images/hands.png"
-                  alt="hands"
-                  width={200}
-                  height={200}
-                  className="opacity-80 scale-75 sm:scale-90 md:scale-100"
-                />
-
+                <div className="flex justify-center items-center">
+                  <Image
+                    src="/images/coupleHands.png"
+                    alt="hands"
+                    width={200}
+                    height={200}
+                    className="opacity-80 scale-75 sm:scale-90 md:scale-100"
+                  />
+                </div>
                 <span>{data.groomName}</span>
               </h1>
 
@@ -95,9 +100,17 @@ const HeroSection = ({ data }: { data: IInvite }) => {
           With the blessings of Lord Venkateshwara, we invite you to celebrate
           our union.
         </p>
-        <div className="animate-bounce text-primary text-xs tracking-widest uppercase opacity-60">
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          animate={{
+            opacity: !hideHeroContent ? 1 : 0,
+            y: !hideHeroContent ? 0 : 8,
+          }}
+          transition={{ delay: 0.5, duration: 0.6, ease: "easeInOut" }}
+          className="animate-bounce text-primary text-xs tracking-widest uppercase opacity-60"
+        >
           Scroll to Explore
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );

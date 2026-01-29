@@ -2,7 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import { EventsSection, HeroSection, Loader } from "@/components";
+import {
+  EventsSection,
+  HeroSection,
+  Loader,
+  LocationSection,
+  Navbar,
+} from "@/components";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -49,13 +55,16 @@ export default function Home() {
         </div>
       ) : data ? (
         <main className="min-h-[60vh] w-full">
+          <Navbar
+            brideName={data.brideName}
+            groomName={data.groomName}
+            weddingDate={data.weddingDate}
+          />
           {/* HERO handles its own centering */}
           <HeroSection data={data} />
-
           {/* CONTENT BELOW HERO */}
-          <section className="content-container py-20">
-            <EventsSection events={data.events} />
-          </section>
+          <EventsSection events={data.events} />
+          <LocationSection location={data.location} />
         </main>
       ) : (
         <div className="flex flex-col items-center justify-center min-h-[60vh] text-center">

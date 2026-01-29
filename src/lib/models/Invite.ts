@@ -8,6 +8,13 @@ export interface IEvent {
   description: string;
 }
 
+export interface ILocation {
+  venue: string;
+  venueDetails: string;
+  venueGoogleMapsLink: string;
+  venueQR: string;
+}
+
 export interface IInvite extends Document {
   slug: string;
   brideName: string;
@@ -20,6 +27,7 @@ export interface IInvite extends Document {
     primaryColor: string;
     accentColor: string;
   };
+  location: ILocation;
 }
 
 const EventSchema = new Schema<IEvent>({
@@ -42,6 +50,12 @@ const InviteSchema = new Schema<IInvite>(
     theme: {
       primaryColor: { type: String, default: "#E0e0e0" },
       accentColor: { type: String, default: "#e9b234" },
+    },
+    location: {
+      venue: { type: String, required: true },
+      venueDetails: { type: String, required: true },
+      venueGoogleMapsLink: { type: String, required: true },
+      venueQR: { type: String, required: true },
     },
   },
   { timestamps: true },

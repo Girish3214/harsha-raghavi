@@ -45,7 +45,7 @@ const EventsSection = ({ events }: { events: IEvent[] }) => {
           </svg>
 
           <div className="flex flex-col gap-12 md:gap-24 relative">
-            {events?.map((event: any, idx: number) => {
+            {events?.map((event: IEvent, idx: number) => {
               const isEven = idx % 2 === 0;
               return (
                 <div key={event._id}>

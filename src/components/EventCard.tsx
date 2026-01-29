@@ -28,7 +28,7 @@ const EventCard = ({ event, isEven }: { event: IEvent; isEven: boolean }) => {
           <div className="space-y-3">
             <div className="flex items-center gap-2">
               {event?.title?.toLowerCase() === "reception" && (
-                <img
+                <Image
                   src="/images/camera.png"
                   alt="camera"
                   width={100}
@@ -42,7 +42,7 @@ const EventCard = ({ event, isEven }: { event: IEvent; isEven: boolean }) => {
                 {event.title}
               </h3>
               {event?.title?.toLowerCase()?.includes("wedding") && (
-                <img
+                <Image
                   src="/images/knot.png"
                   alt="knot"
                   width={100}

@@ -45,7 +45,7 @@ const ContactSection = ({ contacts }: { contacts: IContact[] }) => {
                 <ContactCard
                   key={index}
                   name={contact.name}
-                  relation={contact.relation}
+                  relation={relation || ""}
                   phone={contact.phone}
                 />
               );

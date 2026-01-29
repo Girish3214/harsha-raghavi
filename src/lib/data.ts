@@ -4,7 +4,7 @@ import connectDB from "./mongodb";
 export async function getInvite(
   bride: string,
   groom: string,
-): Promise<IInvite | any | null> {
+): Promise<IInvite | null> {
   const slug = `${bride}-${groom}`.toLowerCase();
 
   try {
@@ -20,6 +20,7 @@ export async function getInvite(
         return null;
       }
     }
+    return null;
   } catch (error) {
     console.warn("[DB] Error connecting or fetching from MongoDB:", error);
     return null;

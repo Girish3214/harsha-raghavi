@@ -38,6 +38,7 @@ const HeroSection = ({ data }: { data: IInvite }) => {
                 src="/images/bride.png"
                 alt="bride"
                 fill
+                sizes="(max-width: 768px) 100vw, 180px"
                 className="object-contain scale-100"
               />
             </div>
@@ -80,6 +81,7 @@ const HeroSection = ({ data }: { data: IInvite }) => {
                 src="/images/groom.png"
                 alt="groom"
                 fill
+                sizes="(max-width: 768px) 100vw, 180px"
                 className="object-contain"
               />
             </div>

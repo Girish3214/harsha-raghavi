@@ -15,10 +15,7 @@ const LocationSection = ({ location }: { location: ILocation }) => {
                 alt="QR Code"
                 width={192}
                 height={192}
-                className="
-            w-44 h-4w-44
-            md:w-48 md:h-48
-          "
+                className="w-44 h-4w-44 md:w-48 md:h-48"
               />
             </div>
           </div>

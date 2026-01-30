@@ -11,11 +11,11 @@ const HeroSection = ({ data }: { data: IInvite }) => {
     <section className="relative h-screen w-full overflow-hidden before:bg-[radial-gradient(circle,rgba(233,178,52,0.08),transparent_70%)]">
       <div className="pointer-events-none absolute top-0 left-0 w-full h-[260px] z-0">
         {/* Soft paper glow (very subtle) */}
-        <div className="absolute top-0 left-0 w-[150px] h-[150px] md:w-[210px] md:h-[210px] bg-[#f3d38a] blur-3xl opacity-40" />
-        <div className="absolute top-0 right-0 w-[150px] h-[150px] md:w-[210px] md:h-[210px] bg-[#f3d38a] blur-3xl opacity-40" />
+        <div className="absolute top-0 left-0 w-[150px] h-[150px] md:w-[250px] md:h-[250px] bg-[#f3d38a] blur-3xl opacity-40" />
+        <div className="absolute top-0 right-0 w-[150px] h-[150px] md:w-[250px] md:h-[250px] bg-[#f3d38a] blur-3xl opacity-40" />
 
         {/* Mandala texture */}
-        <div className="absolute opacity-[0.1] left-11 md:left-0 -translate-y-2/3 translate-x-0 md:-translate-y-1/2 md:-translate-x-1/2  md:block">
+        <div className="absolute opacity-[0.1] left-[50%] md:left-0 -translate-y-1/2 -translate-x-1/2 md:-translate-y-1/2 md:-translate-x-1/2  md:block">
           <Image
             src="/images/mandala.png"
             alt=""
@@ -39,15 +39,7 @@ const HeroSection = ({ data }: { data: IInvite }) => {
 
       <div className="content-container py-16 md:py-20 text-center">
         {/* Devotional Text */}
-        <p
-          className="
-            text-sm md:text-base
-            tracking-wide
-            text-foreground/60
-            font-body
-            z-10
-          "
-        >
+        <p className="text-sm md:text-base tracking-wide text-foreground/60 font-body z-10">
           &#124;&#124; Sri Venkatesaya Namaha &#124;&#124;
         </p>
 
@@ -63,14 +55,14 @@ const HeroSection = ({ data }: { data: IInvite }) => {
         </div>
       </div>
       {/* ================= CENTERED HERO CONTENT ================= */}
-      <div className="absolute inset-0 flex items-center justify-center">
+      <div className="absolute inset-0 flex items-center justify-center flex-col">
         <motion.div
           animate={{
             opacity: hideHeroContent ? 0 : 1,
             y: hideHeroContent ? -20 : 0,
           }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="relative mx-auto max-w-5xl px-6 pb-10 pt-6 rounded-3xl text-center"
+          className="relative mx-auto max-w-5xl px-6 pb-10 pt-6 rounded-3xl text-center mt-0 md:mt-8"
         >
           {/* Mandala Watermark */}
           <div className="pointer-events-none absolute top-0 left-0 right-0 flex items-center justify-center opacity-[0.2]">
@@ -113,38 +105,6 @@ const HeroSection = ({ data }: { data: IInvite }) => {
                 </div>
                 <span>{data.groomName}</span>
               </h1>
-
-              {/* Floral Divider */}
-              <div className="mb-6 mt-8 md:mt-40 md:mb-12">
-                <img
-                  src="/images/border.png"
-                  alt="divider"
-                  width={200}
-                  height={100}
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Date */}
-              <p className="text-base md:text-lg tracking-wide text-muted-foreground">
-                {data.weddingDate}
-              </p>
-
-              {/* Venue */}
-              <p className="mt-1 text-xs md:text-sm uppercase tracking-[0.3em] text-muted-foreground">
-                {data.venue}
-              </p>
-
-              {/* Floral Divider */}
-              <div className="mb-6 mt-8">
-                <img
-                  src="/images/border.png"
-                  alt="divider"
-                  width={200}
-                  height={100}
-                  className="object-cover"
-                />
-              </div>
             </div>
 
             {/* Groom Image – desktop right */}
@@ -159,6 +119,40 @@ const HeroSection = ({ data }: { data: IInvite }) => {
             </div>
           </div>
         </motion.div>
+
+        <div className="flex flex-col items-center">
+          {/* Floral Divider */}
+          <div className="mb-6 mt-8 md:mt-4 md:mb-4">
+            <img
+              src="/images/border.png"
+              alt="divider"
+              width={200}
+              height={100}
+              className="object-cover w-40 md:w-52"
+            />
+          </div>
+
+          {/* Date */}
+          <p className="text-base md:text-lg tracking-wide text-muted-foreground">
+            {data.weddingDate}
+          </p>
+
+          {/* Venue */}
+          <p className="mt-1 text-xs md:text-sm uppercase tracking-[0.3em] text-muted-foreground">
+            {data.venue}
+          </p>
+
+          {/* Floral Divider */}
+          <div className="mb-6 mt-5">
+            <img
+              src="/images/border.png"
+              alt="divider"
+              width={200}
+              height={100}
+              className="object-cover w-40 md:w-52"
+            />
+          </div>
+        </div>
       </div>
 
       {/* ================= SCROLL HINT (BOTTOM LAYER) ================= */}

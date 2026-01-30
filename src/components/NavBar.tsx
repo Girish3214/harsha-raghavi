@@ -20,8 +20,7 @@ const Navbar = ({ brideName, groomName, weddingDate }: NavbarProps) => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -12 }}
           transition={{ duration: 0.35, ease: "easeOut" }}
-          className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xs border-b border-primary/10
-          "
+          className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xs border-b border-primary/10"
         >
           <div className="content-container h-16 flex items-center justify-between gap-4">
             {/* Left: Names (2 rows always) */}

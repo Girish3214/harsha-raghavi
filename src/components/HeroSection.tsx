@@ -160,7 +160,7 @@ const HeroSection = ({ data }: { data: IInvite }) => {
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.6 }}
-        className="absolute bottom-30 left-1/2 -translate-x-1/2 text-center w-full px-4"
+        className="absolute bottom-30 md:bottom-20 left-1/2 -translate-x-1/2 text-center w-full px-4"
       >
         <p className="text-foreground/60 font-body mb-2 text-sm md:text-lg">
           With the blessings of Lord Venkateshwara, we invite you to celebrate

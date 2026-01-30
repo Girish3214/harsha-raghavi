@@ -23,7 +23,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://divyaandmanikanta.vercel.app"),
-  title: "Divyasree & Manikanta Wedding Invite",
+  title: "Divyasree & Manikanta Raju | Wedding Invitation",
   description:
     "With the blessings of family and friends, we invite you to celebrate the wedding of Divya Sree and Manikanta Raju.",
   openGraph: {
@@ -36,6 +36,7 @@ export const metadata: Metadata = {
         url: "https://res.cloudinary.com/dj2gmcaqv/image/upload/v1769745155/marriage/og-image_fvp0rl.png",
         width: 1200,
         height: 630,
+        type: "image/jpg",
         alt: "Wedding invitation of Divya Sree and Manikanta Raju",
       },
     ],

@@ -22,22 +22,22 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://manikantaanddivya.vercel.app"),
-  title: "Divyasree & Manikanta Raju | Wedding Invitation",
+  metadataBase: new URL("https://vamsidhar-swathi.vercel.app/"),
+  title: "Vamsi & Swathi | Wedding Invitation",
   description:
-    "With the blessings of family and friends, we invite you to celebrate the wedding of Divya Sree and Manikanta Raju.",
+    "With the blessings of family and friends, we invite you to celebrate the wedding of Vamsi and Swathi.",
   openGraph: {
-    title: "Divyasree & Manikanta Raju | Wedding Invitation",
+    title: "Vamsi & Swathi | Wedding Invitation",
     description: "Join us in celebrating our wedding.",
-    url: "https://manikantaanddivya.vercel.app",
-    siteName: "Divyasree & Manikanta Wedding",
+    url: "https://vamsidhar-swathi.vercel.app/",
+    siteName: "Vamsi & Swathi Wedding",
     images: [
       {
-        url: "https://res.cloudinary.com/dj2gmcaqv/image/upload/v1769745155/marriage/og-image_fvp0rl.png",
+        url: "https://res.cloudinary.com/dj2gmcaqv/image/upload/v1770125309/marriage/vamsi-swathi/ChatGPT_Image_Feb_3_2026_06_58_05_PM_afodxr.png",
         width: 1200,
         height: 630,
         type: "image/jpg",
-        alt: "Wedding invitation of Divya Sree and Manikanta Raju",
+        alt: "Wedding invitation of Vamsidhar and Swathi",
       },
     ],
     locale: "en_IN",
@@ -45,9 +45,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Divyasree & Manikanta Raju | Wedding Invitation",
-    description:
-      "Join us in celebrating the wedding of Divya Sree and Manikanta Raju.",
+    title: "Vamsi & Swathi | Wedding Invitation",
+    description: "Join us in celebrating the wedding of Vamsi and Swathi.",
   },
   icons: {
     icon: [

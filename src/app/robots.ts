@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/private/",
     },
-    sitemap: "https://manikantaanddivya.vercel.app/sitemap.xml",
+    sitemap: "https://vamsidhar-swathi.vercel.app/sitemap.xml",
   };
 }

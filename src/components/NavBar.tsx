@@ -26,10 +26,10 @@ const Navbar = ({ brideName, groomName, weddingDate }: NavbarProps) => {
             {/* Left: Names (2 rows always) */}
             <div className="leading-tight flex items-center flex-col">
               <p className="text-base md:text-lg font-heading text-primary">
-                {brideName}
+                {groomName}
               </p>
               <p className="text-base md:text-lg font-heading text-primary">
-                {groomName}
+                {brideName}
               </p>
             </div>
 

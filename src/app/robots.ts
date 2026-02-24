@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/private/",
     },
-    sitemap: "https://vamsidhar-swathi.vercel.app/sitemap.xml",
+    sitemap: "https://harsha-raghavi.vercel.app/sitemap.xml",
   };
 }

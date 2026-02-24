@@ -22,22 +22,22 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vamsidhar-swathi.vercel.app/"),
-  title: "Vamsi & Swathi | Wedding Invitation",
+  metadataBase: new URL("https://harsha-raghavi.vercel.app/"),
+  title: "Harsha Vardhan & Raghavi | Wedding Invitation",
   description:
-    "With the blessings of family and friends, we invite you to celebrate the wedding of Vamsi and Swathi.",
+    "With the blessings of family and friends, we invite you to celebrate the wedding of Harsha Vardhan and Raghavi.",
   openGraph: {
-    title: "Vamsi & Swathi | Wedding Invitation",
+    title: "Harsha Vardhan & Raghavi | Wedding Invitation",
     description: "Join us in celebrating our wedding.",
-    url: "https://vamsidhar-swathi.vercel.app/",
-    siteName: "Vamsi & Swathi Wedding",
+    url: "https://harsha-raghavi.vercel.app/",
+    siteName: "Harsha Vardhan & Raghavi Wedding",
     images: [
       {
-        url: "https://res.cloudinary.com/dj2gmcaqv/image/upload/v1770125309/marriage/vamsi-swathi/ChatGPT_Image_Feb_3_2026_06_58_05_PM_afodxr.png",
+        url: "https://res.cloudinary.com/dj2gmcaqv/image/upload/v1771954151/marriage/harsha-raghavi/og_image.png",
         width: 1200,
         height: 630,
         type: "image/jpg",
-        alt: "Wedding invitation of Vamsidhar and Swathi",
+        alt: "Wedding invitation of Harsha Vardhan and Raghavi",
       },
     ],
     locale: "en_IN",
@@ -45,8 +45,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vamsi & Swathi | Wedding Invitation",
-    description: "Join us in celebrating the wedding of Vamsi and Swathi.",
+    title: "Harsha Vardhan & Raghavi | Wedding Invitation",
+    description:
+      "Join us in celebrating the wedding of Harsha Vardhan and Raghavi.",
   },
   icons: {
     icon: [

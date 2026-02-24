@@ -112,7 +112,7 @@ const HeroSection = ({ data }: { data: IInvite }) => {
               {/* Center Content */}
               {/* Names */}
               <h1 className="flex flex-col items-center gap-2 py-6 text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-heading gold-shimmer">
-                <span>{data.brideName}</span>
+                <span>{data.groomName}</span>
 
                 <Image
                   src="/images/coupleHands.png"
@@ -122,7 +122,7 @@ const HeroSection = ({ data }: { data: IInvite }) => {
                   className="opacity-80 scale-75 sm:scale-90 md:scale-100"
                 />
 
-                <span>{data.groomName}</span>
+                <span>{data.brideName}</span>
               </h1>
 
               {/* Groom Image – desktop right */}

@@ -14,7 +14,7 @@ const FooterSection = ({ invite }: { invite: IInvite }) => {
 
         {/* Couple names */}
         <h3 className="text-3xl md:text-4xl font-heading text-primary">
-          {invite.brideName} & {invite.groomName}
+          {invite.groomName} & {invite.brideName}
         </h3>
 
         {/* Date / location */}
